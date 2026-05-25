@@ -20,10 +20,10 @@
             <p class="login-subtitle">Escolha como deseja acessar o sistema</p>
 
             <div class="d-grid gap-3 mt-4">
-                <a href="${pageContext.request.contextPath}/loginAdmin" class="btn btn-primary-custom btn-lg">
+                <a href="${pageContext.request.contextPath}/loginAdmin" class="btn btn-primary-custom btn-role">
                     <i class="bi bi-person-badge me-2"></i> Sou Bibliotecário
                 </a>
-                <a href="${pageContext.request.contextPath}/loginAluno" class="btn btn-outline-primary btn-lg">
+                <a href="${pageContext.request.contextPath}/loginAluno" class="btn btn-primary-custom btn-role">
                     <i class="bi bi-mortarboard me-2"></i> Sou Aluno
                 </a>
             </div>

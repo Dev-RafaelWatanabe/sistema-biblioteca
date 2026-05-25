@@ -1,6 +1,7 @@
 package com.biblioteca.model;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Aluguel {
     private int id;
@@ -47,4 +48,9 @@ public class Aluguel {
 
     public String getAutorNome() { return autorNome; }
     public void setAutorNome(String autorNome) { this.autorNome = autorNome; }
+
+    public String getDataSolicitacaoFormatada() {
+        if (dataSolicitacao == null) return "—";
+        return dataSolicitacao.format(DateTimeFormatter.ofPattern("dd-MM-yyyy"));
+    }
 }

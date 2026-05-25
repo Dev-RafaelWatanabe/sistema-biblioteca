@@ -6,10 +6,10 @@
 }
 
 :root {
-    --primary: #4f46e5;
-    --primary-dark: #3730a3;
-    --primary-light: #818cf8;
-    --secondary: #7c3aed;
+    --primary: #1d4ed8;
+    --primary-dark: #1e40af;
+    --primary-light: #93c5fd;
+    --secondary: #2563eb;
     --success: #059669;
     --success-light: #d1fae5;
     --warning: #d97706;
@@ -20,7 +20,7 @@
     --info-light: #cffafe;
 
     --sidebar-width: 260px;
-    --sidebar-bg: linear-gradient(180deg, #1e1b4b 0%, #312e81 50%, #3730a3 100%);
+    --sidebar-bg: linear-gradient(180deg, #1e3a5f 0%, #1e40af 50%, #1d4ed8 100%);
 
     --body-bg: #f1f5f9;
     --card-bg: #ffffff;
@@ -281,7 +281,7 @@ a {
     margin-bottom: 16px;
 }
 
-.stat-card.primary .stat-icon { background: #eef2ff; color: var(--primary); }
+.stat-card.primary .stat-icon { background: #dbeafe; color: var(--primary); }
 .stat-card.success .stat-icon { background: var(--success-light); color: var(--success); }
 .stat-card.warning .stat-icon { background: var(--warning-light); color: var(--warning); }
 .stat-card.danger .stat-icon { background: var(--danger-light); color: var(--danger); }
@@ -394,7 +394,7 @@ a {
 
 .btn-primary-custom:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
+    box-shadow: 0 4px 12px rgba(29, 78, 216, 0.4);
     color: #fff;
 }
 
@@ -416,7 +416,7 @@ a {
 .btn-action:hover {
     border-color: var(--primary);
     color: var(--primary);
-    background: #eef2ff;
+    background: #dbeafe;
 }
 
 .btn-action.delete:hover {
@@ -462,7 +462,7 @@ a {
 .form-container .form-control:focus,
 .form-container .form-select:focus {
     border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+    box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.15);
 }
 
 /* ---------- Alerts ---------- */
@@ -487,7 +487,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 30%, #4f46e5 60%, #7c3aed 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 30%, #1d4ed8 60%, #2563eb 100%);
     position: relative;
     overflow: hidden;
 }
@@ -499,8 +499,8 @@ a {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle at 30% 70%, rgba(124, 58, 237, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 70% 30%, rgba(79, 70, 229, 0.1) 0%, transparent 50%);
+    background: radial-gradient(circle at 30% 70%, rgba(37, 99, 235, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(29, 78, 216, 0.1) 0%, transparent 50%);
     animation: loginBgMove 20s ease-in-out infinite;
 }
 
@@ -516,7 +516,7 @@ a {
     padding: 48px 40px;
     width: 100%;
     max-width: 440px;
-    box-shadow: var(--shadow-xl), 0 0 60px rgba(79, 70, 229, 0.15);
+    box-shadow: var(--shadow-xl), 0 0 60px rgba(29, 78, 216, 0.15);
     position: relative;
     z-index: 1;
     animation: fadeInUp 0.6s ease;
@@ -538,7 +538,7 @@ a {
     font-size: 28px;
     color: #fff;
     margin: 0 auto 24px;
-    box-shadow: 0 8px 16px rgba(79, 70, 229, 0.3);
+    box-shadow: 0 8px 16px rgba(29, 78, 216, 0.3);
 }
 
 .login-card h1 {
@@ -566,7 +566,7 @@ a {
 
 .login-card .form-control:focus {
     border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+    box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.15);
 }
 
 .login-card .btn-login {
@@ -585,7 +585,15 @@ a {
 
 .login-card .btn-login:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+    box-shadow: 0 6px 20px rgba(29, 78, 216, 0.4);
+}
+
+/* ---------- Role Selection Buttons ---------- */
+.btn-role {
+    width: 100%;
+    padding: 16px 24px;
+    font-size: 16px;
+    justify-content: center;
 }
 
 /* ---------- Empty State ---------- */

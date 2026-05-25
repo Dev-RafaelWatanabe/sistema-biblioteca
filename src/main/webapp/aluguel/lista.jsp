@@ -30,7 +30,7 @@
                             <td><strong>${al.id}</strong></td>
                             <td>${al.alunoNome}</td>
                             <td>${al.livroTitulo}</td>
-                            <td>${al.dataSolicitacao}</td>
+                            <td>${al.dataSolicitacaoFormatada}</td>
                             <td>
                                 <c:choose>
                                     <c:when test="${al.status == 'Solicitado'}">

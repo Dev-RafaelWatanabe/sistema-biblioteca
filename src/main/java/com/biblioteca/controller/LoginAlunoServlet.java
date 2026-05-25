@@ -10,10 +10,12 @@ import jakarta.servlet.http.*;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.UUID;
+import java.util.logging.Logger;
 
 @WebServlet("/loginAluno")
 public class LoginAlunoServlet extends HttpServlet {
 
+    private static final Logger logger = Logger.getLogger(LoginAlunoServlet.class.getName());
     private final AlunoDAO dao = new AlunoDAO();
     private final TokenDAO tokenDAO = new TokenDAO();
 
@@ -47,6 +49,7 @@ public class LoginAlunoServlet extends HttpServlet {
         try {
             Aluno aluno = dao.autenticar(cpf, senha);
             if (aluno != null) {
+                logger.info("[LOGIN] Tipo: ALUNO | CPF: " + cpf + " | Nome: " + aluno.getNome());
                 HttpSession session = request.getSession();
                 session.setAttribute("usuarioLogado", aluno);
                 session.setAttribute("tipoUsuario", "aluno");

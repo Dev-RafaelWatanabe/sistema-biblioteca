@@ -27,7 +27,7 @@
                         <tr>
                             <td><strong>${al.livroTitulo}</strong></td>
                             <td>${al.autorNome != null ? al.autorNome : '—'}</td>
-                            <td>${al.dataSolicitacao}</td>
+                            <td>${al.dataSolicitacaoFormatada}</td>
                             <td>
                                 <c:choose>
                                     <c:when test="${al.status == 'Solicitado'}">

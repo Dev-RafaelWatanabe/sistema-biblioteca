@@ -9,10 +9,12 @@ import jakarta.servlet.http.*;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.UUID;
+import java.util.logging.Logger;
 
 @WebServlet("/loginAdmin")
 public class LoginAdminServlet extends HttpServlet {
 
+    private static final Logger logger = Logger.getLogger(LoginAdminServlet.class.getName());
     private final UsuarioDAO dao = new UsuarioDAO();
     private final TokenDAO tokenDAO = new TokenDAO();
 
@@ -38,6 +40,7 @@ public class LoginAdminServlet extends HttpServlet {
         try {
             Usuario usuario = dao.autenticar(email, senha);
             if (usuario != null) {
+                logger.info("[LOGIN] Tipo: BIBLIOTECÁRIO | E-mail: " + email + " | Nome: " + usuario.getNome());
                 HttpSession session = request.getSession();
                 session.setAttribute("usuarioLogado", usuario);
                 session.setAttribute("tipoUsuario", "admin");
